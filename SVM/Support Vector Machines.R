@@ -1,6 +1,4 @@
-# COSC 4347/5347
-# Support Vector Machines
-# Dr. Schumaker, your support vector through all your machine learning trials
+# Support Vector Machine
 
 # Clear any existing user-defined objects
 rm(list=ls())
@@ -9,7 +7,7 @@ rm(list=ls())
 
 # Setup and connections
 library(RMySQL)
-mydb = dbConnect(MySQL(), user='student', password='analytics', dbname='Baseball2017', host='129.114.219.76')
+mydb = dbConnect(MySQL(), )
 
 # Fetch data
 rs = dbSendQuery(mydb, "SELECT R, H-2B-3B-HR 1B, 2B, 3B, HR, BB+HBP FROM Batting WHERE yearID=2017 AND AB>=50")
